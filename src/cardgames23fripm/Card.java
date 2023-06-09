@@ -9,32 +9,36 @@ package cardgames23fripm;
  * @author Ronak
  */
 public class Card {
-    private int value;
-	private String suit;
+        
+        public enum Suit{Hearts,Clubs,SPADES,DIAMONDS};
+        public enum Value{Ace,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,
+                            NINE,TEN,JACK,QUEEN,KING}
+    
+        private Value value;
+	private Suit suit;
         
         //create an array of possible suits
-        public static final String[] SUITS=
-        {"Hearts","Diamonds","Spades","Clubs"};
         
-        public Card(int value, String suit) {
+        
+        public Card(Value value, Suit suit) {
             this.value = value;
             this.suit = suit;
         }
                 
-	public int getValue() {
+	public Value getValue() {
 		return this.value;
 	}
 	
-	public void setValue(int value) {
+	public void setValue(Value value) {
 		this.value = value;
 	}
 
-	public String getSuit() {
+	public Suit getSuit() {
 		return this.suit;
 	}
 
 	
-	public void setSuit(String suit) {
+	public void setSuit(Suit suit) {
 		this.suit = suit;
 	}
 }
